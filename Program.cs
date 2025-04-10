@@ -135,11 +135,11 @@ class Program
 
         decimal sum = 0;
         string message = "";
-        
+
         for (int i = 0; i < values.Length; i++)
         {
             decimal number;
-            if(decimal.TryParse(values[i], out number))
+            if (decimal.TryParse(values[i], out number))
             {
                 sum += number;
             }
@@ -148,8 +148,8 @@ class Program
                 message += values[i];
             }
         }
-        Console.WriteLine(message);
-        Console.WriteLine(sum);
+        Console.WriteLine($"Message: {message}");
+        Console.WriteLine($"Total: {sum}");
 
 
     }
