@@ -113,6 +113,44 @@ class Program
         **/
 
 
+        /*
+        // int.TryParse(value, out result) - returns true if the conversion from a string to a number is successful.
+
+        string value = "102";
+        int result = 0;
+        if (int.TryParse(value, out result))
+        {
+        Console.WriteLine($"Measurement: {result}");
+        }
+        else
+        {
+        Console.WriteLine("Unable to report the measurement.");
+        }
+
+
+
+        */
+
+        string[] values = { "12,3", "45", "ABC", "11", "DEF" };
+
+        decimal sum = 0;
+        string message = "";
+        
+        for (int i = 0; i < values.Length; i++)
+        {
+            decimal number;
+            if(decimal.TryParse(values[i], out number))
+            {
+                sum += number;
+            }
+            else
+            {
+                message += values[i];
+            }
+        }
+        Console.WriteLine(message);
+        Console.WriteLine(sum);
+
 
     }
 }
